@@ -27,7 +27,6 @@ const Item = ({ input, deleteItem, id, setTodos }) => {
   return (
     <div className='task'>
       <div className='group1'>
-        <i className='fas fa-check'></i>
         <textarea
           rows={1}
           ref={inputRef}
