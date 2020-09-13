@@ -1,0 +1,170 @@
+﻿/* global styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --main-color: #fc5050;
+  --main-font: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--main-font);
+}
+
+body {
+  background: #ffffff;
+}
+
+/* header component styles */
+.header {
+  background: var(--main-color);
+  height: 20rem;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header h1 {
+  font-size: 4rem;
+}
+
+.header h3 {
+  color: #f1f1f1;
+  font-size: 1.5rem;
+}
+
+/* form component styles */
+.form {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.5rem 6rem 0.5rem 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border: 0.15rem solid #cecece;
+  border-radius: 0.4rem;
+  font-family: var(--main-font);
+}
+
+.form input:focus,
+.form button:focus {
+  outline: 0;
+}
+
+.form input:focus {
+  border-color: var(--main-color);
+  border-width: 0.2rem;
+}
+
+.form input::placeholder {
+  color: #b3b3b3;
+}
+
+.form form {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+.form button {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  margin-left: -2rem;
+  border: none;
+  background: var(--main-color);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form button:hover {
+  background: #fb7d7d;
+}
+
+/* item component styles */
+.task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  transition: all 0.2s;
+}
+
+.group1 textarea {
+  font-size: 1.3rem;
+  border: none;
+  font-family: var(--main-font);
+  overflow: hidden;
+  resize: none;
+}
+
+.group1 textarea:focus {
+  outline: none;
+}
+.group2 i {
+  margin: 0 1rem;
+  font-size: 1.3rem;
+}
+
+.group2 i {
+  cursor: pointer;
+}
+
+.group2 i:hover {
+  color: rgb(156, 156, 156);
+}
+
+.clear-btn {
+  border: 0;
+  display: block;
+  color: grey;
+  width: 100%;
+  text-align: center;
+  margin: 5rem auto;
+  padding: 1rem 0;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--main-font);
+}
+
+.clear-btn:hover {
+  color: var(--main-color);
+}
+
+.clear-btn:focus {
+  outline: 0;
+}
+
+/* some media queries to adjust the size of elements according to screen size */
+@media only screen and (min-width: 600px) {
+  .task {
+    justify-content: space-around;
+  }
+
+  .form form {
+    justify-content: center;
+  }
+  .form input {
+    width: 40%;
+  }
+}
