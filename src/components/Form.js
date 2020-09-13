@@ -7,8 +7,12 @@ const Form = ({ setInput, setTodos, input }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTodos((todos) => [...todos, input]);
-    setInput("");
+    if (input !== "") {
+      setTodos((todos) => [...todos, input]);
+      setInput("");
+    } else {
+      alert("Type in something!");
+    }
   };
 
   return (
@@ -16,7 +20,7 @@ const Form = ({ setInput, setTodos, input }) => {
       <form onSubmit={handleSubmit}>
         <input
           type='text'
-          placeholder='Add a task'
+          placeholder='Add a todo here..'
           className='add-task-input'
           onChange={handleChange}
           value={input}

@@ -5,6 +5,7 @@ import Form from "./components/Form.js";
 import Item from "./components/Item.js";
 import { useState } from "react";
 import ClearAllTasks from "./components/ClearAllTasks";
+import Notodos from "./components/Notodos";
 const App = () => {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState(() => {
@@ -42,7 +43,11 @@ const App = () => {
           setTodos={setTodos}
         />
       ))}
-      {todos.length > 0 && <ClearAllTasks clearTodos={clearTodos} />}
+      {todos.length > 0 ? (
+        <ClearAllTasks clearTodos={clearTodos} />
+      ) : (
+        <Notodos />
+      )}
     </>
   );
 };
